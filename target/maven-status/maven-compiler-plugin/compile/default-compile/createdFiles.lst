@@ -1,0 +1,16 @@
+kg\kamalov_sat\model\Role.class
+kg\kamalov_sat\utils\EmailValidator.class
+kg\kamalov_sat\KamalovSatApplication.class
+kg\kamalov_sat\model\User$UserBuilder.class
+kg\kamalov_sat\service\UserService.class
+kg\kamalov_sat\exception\EmailNotFoundException.class
+kg\kamalov_sat\dto\SignUpRequest.class
+kg\kamalov_sat\security\AuthProvider.class
+kg\kamalov_sat\controller\HomeController.class
+kg\kamalov_sat\security\UserDetailsImpl.class
+kg\kamalov_sat\model\User.class
+kg\kamalov_sat\service\RegisterService.class
+kg\kamalov_sat\security\UserDetailsServiceImpl.class
+kg\kamalov_sat\security\SecurityConfig.class
+kg\kamalov_sat\repository\UserRepository.class
+kg\kamalov_sat\controller\AuthController.class

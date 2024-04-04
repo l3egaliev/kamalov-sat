@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+</head>
+<body>
+    <div class="container">
+        <form action="/login_process" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+            <label for="email">Email: </label>
+            <input type="email" name="email" required id="email" class="form-control mb-3">
+            <br>
+
+            <label for="password">Password: </label>
+            <input type="password" name="password" required id="password" class="form-control">
+            <br>
+            <a th:href="@{/auth/register}">Нет аккаунта?</a>
+            <br>
+            <div style="color:red" th:if="${param.error}" >
+                Неправильный email или пароль
+            </div>
+
+            <input type="submit" value="Войти" class="btn btn-primary ">
+        </form>
+    </div>
+
+    <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
+</body>
+</html>
