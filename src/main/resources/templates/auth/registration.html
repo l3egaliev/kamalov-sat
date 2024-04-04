@@ -7,6 +7,7 @@
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/authentication.css}">
     <link rel="stylesheet" th:href="@{/css/register.css}">
+    <link rel="stylesheet" th:href="@{/css/navbar.css}">
 
 </head>
 <body>
@@ -23,12 +24,14 @@
                     <div class="input-group">
                         <span class="input-group-text">First and last name</span>
                         <input type="text" id="firstname-reg" aria-label="First name" required class="form-control firstname" th:field="*{firstname}">
-                        <div  style="color:red" class="firstname-error" th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}"></div>
                         <input type="text"  id="lastname-reg" aria-label="Last name"  required class="form-control lastname" th:field="*{lastname}">
-                        <div  style="color:red" class="lastname-error" th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}"></div>
+                        <div  style="color:red;" class="firstname-error" th:if="${#fields.hasErrors('lastname')}"
+                              th:errors="*{lastname}"></div>
+
+                        <div  style="color:red;" class="firstname-error" th:if="${#fields.hasErrors('firstname')}"
+                              th:errors="*{firstname}"></div>
                     </div>
                   <br>
-
                   <input type="email"  id="email-reg" required class="form-control email mb-1" th:field="*{email}" placeholder="email">
                   <div  style="color:red" class="email-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
                   <br>

@@ -2,6 +2,7 @@ package kg.kamalov_sat.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -9,10 +10,12 @@ import lombok.Data;
 public class SignUpRequest {
     @Size(min = 2, max = 50, message = "Имя пользователя должно содержать от 2 до 50 символов")
     @NotBlank(message = "Имя пользователя не может быть пустыми")
+    @Pattern(regexp = "^[a-zA-Z]+$", message = "Только буквы!")
     private String firstname;
 
     @Size(min = 5, max = 50, message = "Фамилия пользователя должно содержать от 5 до 50 символов")
     @NotBlank(message = "Имя пользователя не может быть пустыми")
+    @Pattern(regexp = "^[a-zA-Z]+$", message = "Только буквы!")
     private String lastname;
 
     @Size(min = 5, max = 255, message = "Адрес электронной почты должен содержать от 5 до 255 символов")
