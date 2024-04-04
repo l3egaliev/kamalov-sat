@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <title>Login page</title>
     <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/authentication.css}">
 </head>
 <body>
-    <div class="container">
-        <form action="/login_process" method="post">
-            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
-            <label for="email">Email: </label>
-            <input type="email" name="email" required id="email" class="form-control mb-3">
-            <br>
+    <div th:replace="~{fragments/navbar::navbar}"></div>
+    <div class="container main-container">
+        <div class="login-form">
+            <h3 class="text-center">Sign In</h3>
+            <p class="text-center form-link">Don't have an account yet?
+                <a th:href="@{/auth/register}">Sign up here</a></p>
+            <form action="/login_process" method="post">
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+                <label for="email">Email: </label>
+                <input type="email" name="email" required id="email" class="form-control mb-3" placeholder="name@example.com">
+                <br>
 
-            <label for="password">Password: </label>
-            <input type="password" name="password" required id="password" class="form-control">
-            <br>
-            <a th:href="@{/auth/register}">Нет аккаунта?</a>
-            <br>
-            <div style="color:red" th:if="${param.error}" >
-                Неправильный email или пароль
-            </div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" required id="password" class="form-control" placeholder="*******">
+                <br>
+                <a href="#" class="mb-3 d-block">Forgot password?</a>
+                <br>
+                <div style="color:red" th:if="${param.error}" >
+                    Неправильный email или пароль
+                </div>
 
-            <input type="submit" value="Войти" class="btn btn-primary ">
-        </form>
+                <input type="submit" value="log in" class="btn btn-primary bg-blue-violet login-btn">
+            </form>
+        </div>
     </div>
 
     <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>

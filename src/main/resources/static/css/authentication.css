@@ -1,23 +1,24 @@
-.forget{
-    position: absolute;
-    right: 50px;
-    font-size: 12px;
+body{
+    background-color: #dfe0e3;
 }
 
-.btn-submit{
-    display: block;
-    padding: 10px 30px;
+a{
+    color: #D377F3;
+    text-decoration: none;
+}
+
+.bg-blue-violet{
+    background-color: #8570FE;
+}
+
+.login-form{
+    max-width: 600px;
+    margin: 100px auto;
+    background-color: #FFF;
+    padding: 40px;
+    border-radius: 30px;
+}
+
+.login-btn, .register-btn{
     width: 100%;
-    margin-top: 50px;
 }
-
-/*.tab-link {*/
-/*    float: left;*/
-/*    outline: none;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*.active-tab{*/
-/*    background-color: #f2f2f2;*/
-/*}*/
-
