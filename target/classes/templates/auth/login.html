@@ -23,12 +23,12 @@
                 <label for="password">Password: </label>
                 <input type="password" name="password" required id="password" class="form-control" placeholder="*******">
                 <br>
-                <a href="#" class="mb-3 d-block">Forgot password?</a>
-                <br>
                 <div style="color:red" th:if="${param.error}" >
                     Неправильный email или пароль
                 </div>
-
+                <br>
+                <a href="#" class="mb-3 d-block">Forgot password?</a>
+                <br>
                 <input type="submit" value="log in" class="btn btn-primary bg-blue-violet login-btn">
             </form>
         </div>

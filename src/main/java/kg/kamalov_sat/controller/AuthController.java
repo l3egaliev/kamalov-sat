@@ -43,7 +43,7 @@ public class AuthController {
         }
 
         registerService.register(user);
-        return "redirect:/auth/login";
+        return "redirect:/login";
     }
 
     private User convertToUser(SignUpRequest request){
