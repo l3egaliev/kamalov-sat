@@ -1,16 +1,3 @@
-body{
-    background-color: #dfe0e3;
-}
-
-a{
-    color: #D377F3;
-    text-decoration: none;
-}
-
-.bg-blue-violet{
-    background-color: #8570FE;
-}
-
 .login-form{
     max-width: 600px;
     margin: 100px auto;

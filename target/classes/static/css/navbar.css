@@ -1,7 +1,3 @@
-body{
-    background-color: #dfe0e3;
-}
-
 .right-nav{
     position: absolute;
     right: 100px;
@@ -12,9 +8,6 @@ body{
     font-weight: 500;
 }
 
-.bg-blue-violet{
-    background-color: #8570FE;
-}
 
 .login-link, .register-link{
     color: #fff;
@@ -35,6 +28,3 @@ body{
     background-color: #fff;
 }
 
-.all-courses{
-    color: #D377F3;
-}
