@@ -13,4 +13,5 @@ kg\kamalov_sat\service\RegisterService.class
 kg\kamalov_sat\security\UserDetailsServiceImpl.class
 kg\kamalov_sat\security\SecurityConfig.class
 kg\kamalov_sat\repository\UserRepository.class
+kg\kamalov_sat\controller\CourseController.class
 kg\kamalov_sat\controller\AuthController.class
