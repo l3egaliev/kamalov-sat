@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -15,14 +15,17 @@
                 <ul class="nav nav-underline right-nav">
                     <li class="nav-item">
                         <a class="nav-link all-courses" id="home" aria-current="page" th:href="@{/courses/all}">
-                            <strong>All courses</strong>
+                            <strong>Все курсы</strong>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a th:href="@{/login}" id="products" class="btn btn-primary login-link">Sign In</a>
+                        <a class="nav-link" th:href="@{/info}">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary bg-blue-violet register-link" id="blog" th:href="@{/auth/register}">Sign Up</a>
+                        <a th:href="@{/login}" id="products" class="btn btn-primary login-link">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary bg-blue-violet register-link" id="blog" th:href="@{/auth/register}">Регистрация</a>
                     </li>
                 </ul>
             </div>
