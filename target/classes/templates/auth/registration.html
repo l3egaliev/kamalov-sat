@@ -37,7 +37,8 @@
                   <div  style="color:red" class="email-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
                   <br>
 
-                  <input type="password" class="form-control password" required th:field="*{password}" id="password-reg" placeholder="Пароль">
+                  <input type="password" class="form-control password" required th:field="*{password}" id="password" placeholder="Пароль">
+                  <input type="checkbox" class="mt-3 mb-4" name="showPassword" id="showPassword" > <label for="showPassword"><small>Показать пароль</small></label>
                   <div  style="color:red" class="password-error" th:if="${#fields.hasErrors('password')}"  th:errors="*{password}"></div>
                   <br>
 
@@ -46,6 +47,7 @@
           </div>
       </div>
 
+    <script src="/js/login.js"></script>
         <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
 </body>
 </html>
