@@ -24,7 +24,6 @@
 
                 <label for="password">Password: </label>
                 <input type="password" name="password" required id="password" class="form-control" placeholder="********">
-                <input type="checkbox" class="mt-3 mb-3" name="showPassword" id="showPassword" > <label for="showPassword"><small>Показать пароль</small></label>
                 <br>
                 <div style="color:red" th:if="${param.error}" >
                     Неправильный email или пароль
@@ -38,6 +37,5 @@
     </div>
 
     <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.min.js}"></script>
-    <script src="/js/login.js"></script>
 </body>
 </html>
