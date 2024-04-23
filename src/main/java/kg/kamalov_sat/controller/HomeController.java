@@ -20,4 +20,10 @@ public class HomeController {
         model.addAttribute("user", userService.currentUser());
         return "public/index";
     }
+
+    @GetMapping("/home")
+    public String home(Model model) {
+        model.addAttribute("user", userService.currentUser());
+        return "public/index";
+    }
 }
