@@ -5,7 +5,6 @@ import kg.kamalov_sat.model.User;
 import kg.kamalov_sat.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,11 +18,11 @@ public class UserService {
      * Сохранение пользователя
      */
     @Transactional
-    public void save(User user){
+    public void save(User user) {
         repository.save(user);
     }
 
-    public boolean isExistsEmail(String e){
+    public boolean isExistsEmail(String e) {
         return repository.existsByEmail(e);
     }
 
@@ -32,10 +31,10 @@ public class UserService {
      *
      * @return User
      */
-    public User findByEmail(String email){
+    public User findByEmail(String email) {
         System.out.println(email);
         return repository.findByEmail(email)
-                .orElseThrow(() -> new EmailNotFoundException("User not found with email "+email));
+                .orElseThrow(() -> new EmailNotFoundException("User not found with email " + email));
     }
 
     /**
@@ -43,7 +42,7 @@ public class UserService {
      *
      * @return текущий пользователь
      */
-    public User currentUser(){
+    public User currentUser() {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
         return this.findByEmail(email);
     }

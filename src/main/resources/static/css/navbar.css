@@ -8,23 +8,11 @@
     font-weight: 500;
 }
 
-
-.login-link, .register-link{
-    color: #fff;
-    border: 1px solid #459CED;
-}
-
-.login-link:hover {
-    color: #459CED;
-    background-color: #fff;
-}
-
-.register-link{
-    border: 1px solid #8570FE;
-}
-
-.register-link:hover {
+.navs-link{
     color: #8570FE;
-    background-color: #fff;
+}
+
+.active-link{
+    color: #D377F3;
 }
 

@@ -23,7 +23,7 @@ public class AuthProvider implements AuthenticationProvider {
         String email = authentication.getName();
         UserDetails userDetails = service.loadUserByUsername(email);
         String password = authentication.getCredentials().toString();
-        if(!userDetails.getPassword().equals(password)){
+        if (!userDetails.getPassword().equals(password)) {
             throw new BadCredentialsException("Email or password incorrect");
         }
         return new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());

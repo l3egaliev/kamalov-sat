@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CourseController {
 
     @GetMapping("/all")
-    public String all(){
+    public String all() {
         return "public/all-courses";
     }
 }

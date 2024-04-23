@@ -12,7 +12,7 @@ public class RegisterService {
     private final UserService service;
     private final PasswordEncoder encoder;
 
-    public void register(User user){
+    public void register(User user) {
         user.setRole(Role.ROLE_USER);
         user.setPassword(encoder.encode(user.getPassword()));
         service.save(user);

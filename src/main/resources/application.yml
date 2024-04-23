@@ -1,8 +1,8 @@
 server:
   port: 8080
 spring:
-#  profiles:
-#    active: @spring.profiles.active@
+  #  profiles:
+  #    active: @spring.profiles.active@
   application:
     name: kamalov_sat
   datasource:

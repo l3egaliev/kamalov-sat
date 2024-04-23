@@ -25,8 +25,8 @@ public class EmailValidator implements Validator {
     public void validate(Object target, Errors errors) {
     }
 
-    public void validate(User user, Errors errors){
-        if (userService.isExistsEmail(user.getEmail())){
+    public void validate(User user, Errors errors) {
+        if (userService.isExistsEmail(user.getEmail())) {
             errors.rejectValue("email", "", "Такой email уже существует");
         }
     }

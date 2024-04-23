@@ -35,7 +35,7 @@ public class User {
     @Column(name = "role")
     private Role role;
 
-    public User(String email){
+    public User(String email) {
         this.email = email;
     }
 }

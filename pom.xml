@@ -18,6 +18,8 @@
 		<java.version>17</java.version>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<mvn-surfire.version>3.2.5</mvn-surfire.version>
+		<bootstrap.version>5.3.2</bootstrap.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -53,7 +55,7 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
-			<version>5.3.2</version>
+			<version>${bootstrap.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -93,7 +95,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>3.2.5</version>
+				<version>${mvn-surfire.version}</version>
 			</plugin>
 		</plugins>
 	</build>

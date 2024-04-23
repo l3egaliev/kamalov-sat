@@ -22,23 +22,23 @@ public class AuthController {
     private final EmailValidator emailValidator;
 
     @GetMapping("/login")
-    public String login(){
-            return "auth/login";
+    public String login() {
+        return "auth/login";
     }
 
 
     @GetMapping("/auth/register")
-    public String register(@ModelAttribute("register_user") SignUpRequest request){
+    public String register(@ModelAttribute("register_user") SignUpRequest request) {
         return "auth/registration";
     }
 
     @PostMapping("/auth/register")
     public String register(@ModelAttribute("register_user") @Valid SignUpRequest request,
-                           BindingResult bd){
+                           BindingResult bd) {
         User user = convertToUser(request);
         emailValidator.validate(user, bd);
 
-        if (bd.hasErrors()){
+        if (bd.hasErrors()) {
             return "auth/registration";
         }
 
@@ -46,7 +46,7 @@ public class AuthController {
         return "redirect:/login";
     }
 
-    private User convertToUser(SignUpRequest request){
+    private User convertToUser(SignUpRequest request) {
         return User.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())

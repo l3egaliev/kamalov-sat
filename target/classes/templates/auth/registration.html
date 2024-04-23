@@ -26,12 +26,12 @@
                         <span class="input-group-text">Имя и фамилия</span>
                         <input type="text" id="firstname-reg" aria-label="First name" required class="form-control firstname" th:field="*{firstname}">
                         <input type="text"  id="lastname-reg" aria-label="Last name"  required class="form-control lastname" th:field="*{lastname}">
-                        <div  style="color:red;" class="firstname-error" th:if="${#fields.hasErrors('lastname')}"
-                              th:errors="*{lastname}"></div>
-
-                        <div  style="color:red;" class="firstname-error" th:if="${#fields.hasErrors('firstname')}"
-                              th:errors="*{firstname}"></div>
                     </div>
+                  <div  style="color:red;" class="lastname-error" th:if="${#fields.hasErrors('lastname')}"
+                        th:errors="*{lastname}"></div>
+
+                  <div  style="color:red;" class="firstname-error" th:if="${#fields.hasErrors('firstname')}"
+                        th:errors="*{firstname}"></div>
                   <br>
                   <input type="email"  id="email-reg" required class="form-control email mb-1" th:field="*{email}" placeholder="Email">
                   <div  style="color:red" class="email-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>

@@ -14,21 +14,20 @@
                 </a>
                 <ul class="nav nav-underline right-nav">
                     <li class="nav-item">
-                        <a class="nav-link all-courses" id="home" aria-current="page" th:href="@{/courses/all}">
-                            <strong>Все курсы</strong>
+                        <a class="nav-link all-courses" th:href="@{/courses/all}">
+                            Все курсы
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/info}">О нас</a>
+                        <a th:href="@{/login}" id="products" class="nav-link active-link">Войти</a>
                     </li>
                     <li class="nav-item">
-                        <a th:href="@{/login}" id="products" class="btn btn-primary login-link">Войти</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-primary bg-blue-violet register-link" id="blog" th:href="@{/auth/register}">Регистрация</a>
+                        <a class="nav-link" id="blog" th:href="@{/auth/register}">Регистрация</a>
                     </li>
                 </ul>
             </div>
+
+<!--            <script src="/js/main.js"></script>-->
         </nav>
     </div>
 </body>
