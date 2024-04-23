@@ -15,7 +15,7 @@ public class HomeController {
         this.userService = userService;
     }
 
-    @GetMapping("/home")
+    @GetMapping
     public String homePage(Model model) {
         model.addAttribute("user", userService.currentUser());
         return "public/index";
